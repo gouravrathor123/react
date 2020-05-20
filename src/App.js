@@ -1,31 +1,29 @@
-import React,{ Component } from 'react';
-import logo from './logo.svg';
-import {Navbar, NavbarBrand,Collapse,NavbarToggler,NavItem,Nav,UncontrolledDropdown} from 'reactstrap';
+import React,{Component} from 'react';
+import {Navbar,NavbarBrand} from 'reactstrap';
 import Menu from './components/MenuComponent';
-import './App.css';
 import {DISHES} from './share/dishes';
 
-class App extends Component {
+class App extends Component{
 
   constructor(props){
     super(props);
 
-    this.state = {
+    this.state= {
       dishes: DISHES
     };
   }
 
-  render() {
-    return (
+  render(){
+    return(
       <div>
-        <Navbar dark color="primary">
+        <Navbar dark color="secondary">
           <div className="container">
-            <NavbarBrand href="/">About Home Produts </NavbarBrand>
+            <NavbarBrand href='./'>#V_07 Welcomes You</NavbarBrand>
           </div>
         </Navbar>
         <Menu dishes={this.state.dishes} />
       </div>
-  );
+    );
   }
 }
 
