@@ -15,7 +15,7 @@ class Dishdetail extends Component {
                     &nbsp;
                     {new Intl.DateTimeFormat('en-US', {
                             year: 'numeric',
-                            month: 'long',
+                            month: 'short',
                             day: '2-digit'
                         }).format(new Date(comment.date))}
                     </p>
@@ -25,7 +25,7 @@ class Dishdetail extends Component {
         return (
             <div className='col-12 col-md-5 m-1'>
                 <h4> Comments </h4>
-                <ul className='list-unstyled'>
+                <ul>
                     {cmnts}
                 </ul>
 
@@ -60,12 +60,14 @@ class Dishdetail extends Component {
         const dishItem = this.renderDish(dish)
         const commentItem = this.renderComments(dish.comments)
         return (
-            <div className='row'>
-                {dishItem}
-                {commentItem}
+        	<div className="container">
+            	<div className='row'>
+                	{dishItem}
+                	{commentItem}
+            	</div>
             </div>
         )
     }
 }
 
-export default Dishdetail
+export default Dishdetail;
